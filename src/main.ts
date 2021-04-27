@@ -4,9 +4,18 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.log(err));
+
+// Call the element loader after the platform has been bootstrapped
+// Some Capacitor plugins, including the Camera API, provide
+// the web - based functionality and UI via the Ionic PWA Elements library.
+// https://github.com/ionic-team/pwa-elements
+defineCustomElements(window);

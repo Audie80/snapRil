@@ -11,6 +11,7 @@
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
+stale_outputs_checked
 $RECYCLE.BIN/
 
 *.log
@@ -25,6 +26,7 @@ npm-debug.log*
 /.vscode
 /coverage
 /dist
+/android
 /node_modules
 /platforms
 /plugins
