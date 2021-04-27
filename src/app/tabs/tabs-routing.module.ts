@@ -8,29 +8,36 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        path: 'connection',
+        loadChildren: () =>
+          import('../connection/connection.module').then(
+            (m) => m.ConnectionPageModule
+          ),
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'photos',
+        loadChildren: () =>
+          import('../photo-gallery/photo-gallery.module').then(
+            (m) => m.PhotoGalleryPageModule
+          ),
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'messages',
+        loadChildren: () =>
+          import('../inbox/inbox.module').then((m) => m.InboxPageModule),
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
-      }
-    ]
+        redirectTo: '/tabs/connection',
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
-  }
+    redirectTo: '/tabs/connection',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

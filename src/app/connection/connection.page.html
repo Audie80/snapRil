@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Welcome to SnapRIL </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item class="ion-margin-horizontal">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-horizontal">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-row class="ion-justify-content-center ion-margin-top"
+      ><ion-button [routerLink]="['/tabs/messages']"
+        >Se connecter</ion-button
+      ></ion-row
+    >
+    <ion-row class="ion-justify-content-center"
+      ><ion-button [routerLink]="['/signin']">S'inscrire</ion-button></ion-row
+    ></ion-list
+  >
+</ion-content>

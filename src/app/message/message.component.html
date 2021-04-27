@@ -1,0 +1,19 @@
+<ion-item *ngIf="message" [detail]="false" class="ion-align-items-start">
+  <ion-avatar slot="start">
+    <img src="../../assets/img/avatar-rey.png" />
+  </ion-avatar>
+  <ion-label class="ion-text-wrap">
+    <h2>
+      {{ message.fromName }}
+      <span class="date">
+        <ion-note>{{ message.date }}</ion-note>
+        <ion-icon
+          name="chevron-forward"
+          size="small"
+          *ngIf="isIos()"
+        ></ion-icon>
+      </span>
+    </h2>
+    <p>{{ message.content }}</p>
+  </ion-label>
+</ion-item>
