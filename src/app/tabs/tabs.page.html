@@ -1,11 +1,11 @@
 <ion-tabs>
   <ion-tab-bar #myTabBar id="myTabBar" slot="bottom">
-    <ion-tab-button tab="connection">
+    <ion-tab-button tab="connection" (click)="signout()">
       <ion-icon name="triangle"></ion-icon>
-      <ion-label>Connexion</ion-label>
+      <ion-label>Déconnexion</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="messages">
+    <ion-tab-button href="/tabs/messages#inputMessage">
       <ion-icon name="square"></ion-icon>
       <ion-label>Messages</ion-label>
     </ion-tab-button>

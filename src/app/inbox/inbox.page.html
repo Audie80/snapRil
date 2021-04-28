@@ -1,6 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title> Inbox </ion-title>
+    <ion-chip slot="end">
+      <ion-label>{{ username }}</ion-label>
+      <ion-avatar><img [src]="srcImg" /></ion-avatar
+    ></ion-chip>
   </ion-toolbar>
 </ion-header>
 
@@ -17,13 +21,16 @@
 
   <ion-list>
     <app-message
-      *ngFor="let message of getMessages()"
+      *ngFor="let message of messages"
       [message]="message"
     ></app-message>
   </ion-list>
 
-  <ion-item class="ion-align-items-center">
-    <ion-textarea placeholder="Envoyer un message"></ion-textarea>
-    <ion-button>Envoyer</ion-button>
+  <ion-item class="ion-align-items-center" id="inputMessage">
+    <ion-textarea
+      placeholder="Envoyer un message"
+      [(ngModel)]="inputMessage"
+    ></ion-textarea>
+    <ion-button (click)="sendMessage()">Envoyer</ion-button>
   </ion-item>
 </ion-content>

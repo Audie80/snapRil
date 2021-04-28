@@ -1,6 +1,6 @@
 <ion-item *ngIf="message" [detail]="false" class="ion-align-items-start">
   <ion-avatar slot="start">
-    <img src="../../assets/img/avatar-rey.png" />
+    <img [src]="message.photoUrl" />
   </ion-avatar>
   <ion-label class="ion-text-wrap">
     <h2>

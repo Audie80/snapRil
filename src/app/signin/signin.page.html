@@ -13,18 +13,26 @@
   <ion-list>
     <ion-item class="ion-margin-horizontal">
       <ion-label position="floating">Username</ion-label>
-      <ion-input #inputUsername name="username"></ion-input>
+      <ion-input [(ngModel)]="inputUsername" required></ion-input>
     </ion-item>
     <ion-item class="ion-margin-horizontal">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="email" #inputEmail name="email"></ion-input>
+      <ion-input type="email" [(ngModel)]="inputEmail" required></ion-input>
     </ion-item>
     <ion-item class="ion-margin-horizontal">
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #inputPassword name="password"></ion-input>
+      <ion-input
+        type="password"
+        [(ngModel)]="inputPassword"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-horizontal">
+      <ion-label position="floating">Lien vers photo de profil</ion-label>
+      <ion-input [(ngModel)]="inputPhotoUrl" required></ion-input>
     </ion-item>
     <ion-row class="ion-justify-content-center ion-margin-top">
-      <ion-button ng-click="signin()">S'inscrire</ion-button>
+      <ion-button (click)="signin()">S'inscrire</ion-button>
     </ion-row>
   </ion-list>
 </ion-content>

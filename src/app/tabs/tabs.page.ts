@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import firebase from 'firebase';
 
 @Component({
   selector: 'app-tabs',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss'],
 })
 export class TabsPage {
-  constructor() {}
+  constructor(public router: Router) {}
+
+  signout() {
+    // Déconnexion
+    firebase.auth().signOut();
+
+    // Redirection
+    this.router.navigate(['tabs/connection']);
+  }
 }

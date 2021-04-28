@@ -8,7 +8,7 @@ https://ionicframework.com/docs/angular/your-first-app
 
 ## Etape 2 : connexion, inscription, liste de messages
 
-...
+2 activités ont été créées pour la connexion et l'inscription. L'authentification se fait avec Firebase. Les messages sont sauvegardés dans Realtime Database et affichés en temps réel.
 
 ## Démarrage
 
@@ -18,10 +18,19 @@ ionic serve
 
 ## Génération des app natives
 
+La première fois :
+
 ```batch
 ionic build
 ionic cap add android
 ionic cap open android
+```
+
+Si changement :
+
+```batch
+ionic build
+ionic cap copy
 ```
 
 ## Live reload

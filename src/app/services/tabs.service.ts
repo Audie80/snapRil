@@ -7,7 +7,7 @@ import { filter } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class TabsService {
-  private hideTabBarPages: string[] = ['connection'];
+  private hideTabBarPages: string[] = ['tabs', 'connection'];
 
   constructor(private router: Router, private platform: Platform) {
     this.platform.ready().then(() => {

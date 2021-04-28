@@ -5,6 +5,7 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
+import firebase from 'firebase';
 
 if (environment.production) {
   enableProdMode();
@@ -19,3 +20,6 @@ platformBrowserDynamic()
 // the web - based functionality and UI via the Ionic PWA Elements library.
 // https://github.com/ionic-team/pwa-elements
 defineCustomElements(window);
+
+// Initialize Firebase
+firebase.initializeApp(environment.firebaseConfig);
